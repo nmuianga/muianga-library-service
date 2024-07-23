@@ -1,7 +1,11 @@
 package model
 
+import "gorm.io/gorm"
+
 type Book struct {
-	ID      int64
-	Title   string
-	Authors []string
+	gorm.Model
+	Title       string
+	Author      string
+	CategoryID  uint
+	PublisherID uint
 }
